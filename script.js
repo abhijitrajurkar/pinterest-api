@@ -46,7 +46,7 @@ var Pinterest = {
      */
     getBoards: function(data, callback) {
         PDK.request('boards/'+data+'/pins/', 'GET', callback);
-    };
+    }
 };
 
 // one time init of the application
