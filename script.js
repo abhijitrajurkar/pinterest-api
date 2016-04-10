@@ -42,7 +42,7 @@ var Pinterest = {
     },
 
     followedBoards: function(callback) {
-        PDK.me('following/boards', callback);
+        PDK.me('boards', callback);
     },
     /*
      *  Use SDK to request current users boards
@@ -75,7 +75,6 @@ Pinterest.myBoards(response => {
            console.log(response.data);
 });
 
-var data = ["241013086247673676", "Hello, world!", "http://www.google.com", "http://i.imgur.com/a2tjOcm.png"];
 
 var dataBoard = 'glamour';
 Pinterest.getBoards(dataBoard , response => {
