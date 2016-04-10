@@ -48,8 +48,7 @@ PDK.init({ appId: Const.PIN_APP, cookie: true });
 function   resetState() {
         var state = {            
             pinterest: Pinterest.loggedIn()
-        };
-    console.log("in reset state");
+        };    
         return state;
     }
 
@@ -65,3 +64,8 @@ Pinterest.myBoards(response => {
            console.log(response.data);
 });
 
+var data = {"241013086247673676", "Hello, world!", "http://www.google.com", "http://i.imgur.com/a2tjOcm.png"};
+
+Pinterest.createPin(data, response => {
+           console.log(response.data);
+});
