@@ -38,8 +38,12 @@ var Pinterest = {
      *  @param {Function} callback - function fired on completion
      */
     myBoards: function(callback) {
-        PDK.me('boards', { fields: Const.PIN_FIELDS }, callback);
+        PDK.me('boards', { fields: Const.PIN_FIELDS }, callback),
     }
+
+    getBoards: function(data, callback) {
+        PDK.request('boards'/+data+'/pins/', 'GET', data, callback);
+    };
 };
 
 // one time init of the application
@@ -66,6 +70,7 @@ Pinterest.myBoards(response => {
 
 var data = ["241013086247673676", "Hello, world!", "http://www.google.com", "http://i.imgur.com/a2tjOcm.png"];
 
-Pinterest.createPin(data, response => {
+var dataBoard = 'glamour';
+Pinterest.getBoards(dataBoard , response => {
            console.log(response.data);
 });
