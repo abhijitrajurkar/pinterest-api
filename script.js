@@ -42,7 +42,7 @@ var Pinterest = {
     },
 
     followedBoards: function(callback) {
-        PDK.request('me/following/boards', callback);
+        PDK.request('me/following/boards', 'GET', callback);
     },
     /*
      *  Use SDK to request current users boards
