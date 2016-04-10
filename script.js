@@ -38,11 +38,11 @@ var Pinterest = {
      *  @param {Function} callback - function fired on completion
      */
     myBoards: function(callback) {
-        PDK.me('boards', { fields: Const.PIN_FIELDS }, callback),
+        PDK.me('boards', { fields: Const.PIN_FIELDS }, callback);
     }
 
     getBoards: function(data, callback) {
-        PDK.request('boards'/+data+'/pins/', 'GET', data, callback),
+        PDK.request('boards'/+data+'/pins/', 'GET', callback);
     };
 };
 
