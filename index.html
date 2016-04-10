@@ -13,7 +13,24 @@
         js.src = "//assets.pinterest.com/sdk/sdk.js";
         pjs.parentNode.insertBefore(js, pjs);
     }(document, 'script', 'pinterest-jssdk'));
+
+    var params = {
+  fields: 'id,note,link,image'
+};
+var pins = [];
+PDK.request('/boards/241013086247673676/pins/', function (response) { // Make sure to change the board_id
+  if (!response || response.error) {
+    alert('Error occurred');
+  } else {
+    pins = pins.concat(response.data);
+    if (response.hasNext) {
+      response.next(); // this will recursively go to this same callback
+    }
+  }
+});
+
 </script>
+
 
 <h1 id="header">Happy Valentine's Day!</h1>
     <img src="http://i.imgur.com/a2tjOcm.png">
