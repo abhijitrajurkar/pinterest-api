@@ -42,7 +42,7 @@ var Pinterest = {
     }
 
     getBoards: function(data, callback) {
-        PDK.request('boards'/+data+'/pins/', 'GET', data, callback);
+        PDK.request('boards'/+data+'/pins/', 'GET', data, callback),
     };
 };
 
