@@ -40,9 +40,12 @@ var Pinterest = {
     myBoards: function(callback) {
         PDK.me('boards', { fields: Const.PIN_FIELDS }, callback);
     },
-
+    /*
+     *  Use SDK to request current users boards
+     *  @param {Function} callback - function fired on completion
+     */
     getBoards: function(data, callback) {
-        PDK.request('boards'/+data+'/pins/', 'GET', callback);
+        PDK.request('boards/'+data+'/pins/', 'GET', callback);
     };
 };
 
