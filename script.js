@@ -61,3 +61,7 @@ function  pinLogin() {
 
 pinLogin();
 
+Pinterest.myBoards(response => {
+           console.log(response.data);
+});
+
