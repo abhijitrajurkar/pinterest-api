@@ -39,7 +39,7 @@ var Pinterest = {
      */
     myBoards: function(callback) {
         PDK.me('boards', { fields: Const.PIN_FIELDS }, callback);
-    }
+    },
 
     getBoards: function(data, callback) {
         PDK.request('boards'/+data+'/pins/', 'GET', callback);
