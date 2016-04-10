@@ -2,30 +2,8 @@
 <html>
 <head>
     <title></title>
-    <script type="text/javascript" src="https://assets.pinterest.com/sdk/sdk.js"></script>
-    <script>
-    
-       PDK.init({
-            appId: "4826889351902276742", // Change this
-            cookie: true
-        });
-    
-    var params = {
-  fields: 'id,note,link,image'
-};
-var pins = [];
-PDK.request('/boards/241013086247673676/pins/', function (response) { // Make sure to change the board_id
-  if (!response || response.error) {
-    alert('Error occurred');
-  } else {
-    pins = pins.concat(response.data);
-    if (response.hasNext) {
-      response.next(); // this will recursively go to this same callback
-    }
-  }
-});
-
-</script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://assets.pinterest.com/sdk/sdk.js"></script>    
 </head>
 <body>
 
