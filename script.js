@@ -64,7 +64,7 @@ Pinterest.myBoards(response => {
            console.log(response.data);
 });
 
-var data = {"241013086247673676", "Hello, world!", "http://www.google.com", "http://i.imgur.com/a2tjOcm.png"};
+var data = ["241013086247673676", "Hello, world!", "http://www.google.com", "http://i.imgur.com/a2tjOcm.png"];
 
 Pinterest.createPin(data, response => {
            console.log(response.data);
