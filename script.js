@@ -40,6 +40,10 @@ var Pinterest = {
     myBoards: function(callback) {
         PDK.me('boards', { fields: Const.PIN_FIELDS }, callback);
     },
+
+    followedBoards: function(callback) {
+        PDK.me('following/boards', callback);
+    },
     /*
      *  Use SDK to request current users boards
      *  @param {Function} callback - function fired on completion
@@ -77,3 +81,7 @@ var dataBoard = 'glamour';
 Pinterest.getBoards(dataBoard , response => {
            console.log(response.data);
 });
+
+Pinterest.followedBoards(response => {
+           console.log(response.data);
+})
